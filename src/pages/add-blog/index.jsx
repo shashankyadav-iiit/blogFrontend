@@ -16,10 +16,10 @@ export default function AddNewBlog(){
 
     async function handleSaveBlogToDatabase(){
 
-        const response = currentEditedData ?await axios.put(`http://localhost:5000/api/blogs/update/${location.state.getCurrentBlogItem._id}`,{
+        const response = currentEditedData ?await axios.put(`https://blogbackend-v8fr.onrender.com/api/blogs/update/${location.state.getCurrentBlogItem._id}`,{
             title: formData.title,
             description: formData.description
-        }) :await axios.post('http://localhost:5000/api/blogs/add', {
+        }) :await axios.post('https://blogbackend-v8fr.onrender.com/api/blogs/add', {
             title: formData.title,
             description: formData.description
         })

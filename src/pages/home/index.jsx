@@ -17,7 +17,7 @@ export default function Home() {
 
     async function fetchListOfBlogs() {
         setPending(true);
-        const response = await axios.get('http://localhost:5000/api/blogs/')
+        const response = await axios.get('https://blogbackend-v8fr.onrender.com/api/blogs/')
         const res = await response.data;
 
         // console.log(res);
@@ -35,7 +35,7 @@ export default function Home() {
     async function handleDeleteBlog(getCurrentId) {
         // console.log(getCurrentId);
 
-        const response = await axios.delete(`http://localhost:5000/api/blogs/delete/${getCurrentId}`);
+        const response = await axios.delete(`https://blogbackend-v8fr.onrender.com/api/blogs/delete/${getCurrentId}`);
         const res = await response.data;
 
         if (res?.message) {
